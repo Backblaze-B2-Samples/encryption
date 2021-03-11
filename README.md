@@ -2,7 +2,7 @@
 
 Backblaze’s backup product has been encrypting customer data by default from the day it shipped in 2008. The files are encrypted on the user’s computer, transferred to Backblaze via an encrypted SSL connection and stored in the encrypted format. In fact, there is no way to turn it off. Flash forward to 2016, we’ve now encrypted billions of files and decrypted millions of files. The way encryption works in the online backup product is described on the [Backblaze blog](https://www.backblaze.com/blog/how-to-make-strong-encryption-easy-to-use/).
 
-For B2, encryption had to be optional. Some use cases would require encryption, some would not. This article describes one way to encrypt files and push them to B2, using the a similar technique to how the Backblaze online backup product works today.
+While B2 does support [server side encryption](https://www.backblaze.com/b2/docs/server_side_encryption.html), some customers perfer to manage their own encryption keys and upload encrypted files to B2. This article describes one way to encrypt files and push them to B2, using the a similar technique to how the Backblaze online backup product works today.
 
 **Prerequisities**
 - OpenSSL command line tool.
