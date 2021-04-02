@@ -31,7 +31,7 @@ b2 download_file_by_name $BUCKET_NAME $FILE_TO_DECRYPT.key.enc \
 # the filesystem.
 
 openssl rsautl -decrypt -inkey $PRIVATE_KEY -in $FILE_TO_DECRYPT.key.enc | \
-	openssl enc -aes-256-cbc -d -a -pass stdin -in \
+	openssl enc -aes-256-cbc -d -pass stdin -in \
 	$FILE_TO_DECRYPT.enc -out $FILE_TO_DECRYPT 
 
 
