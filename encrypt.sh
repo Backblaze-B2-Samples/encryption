@@ -36,3 +36,4 @@ echo $ONE_TIME_PASSWORD | \
 b2 upload_file $B2_BUCKET_NAME $FILE_TO_ENCRYPT.enc $FILE_TO_ENCRYPT.enc
 b2 upload_file $B2_BUCKET_NAME $FILE_TO_ENCRYPT.key.enc \
 	$FILE_TO_ENCRYPT.key.enc
+b2 cancel-all-unfinished-large-files $B2_BUCKET_NAME
